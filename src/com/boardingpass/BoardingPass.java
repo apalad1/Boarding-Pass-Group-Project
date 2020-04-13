@@ -1,5 +1,4 @@
 package com.boardingpass;
-import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -22,9 +21,11 @@ public class BoardingPass {
         this.destination = destination;
         this.departureTime = departureTime;
         this.ticketPrice = setPriceWithAgeAndGender(this.age);
-        this.estimatedArrivalTime = "1h";
         // pattern "MM/dd/yyyy HH:mm:ss"
-        this.strDate = new SimpleDateFormat("MM/dd/yyyy").format(Calendar.getInstance().getTime());
+        Calendar cal = Calendar.getInstance();
+        this.strDate = new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime());
+        cal.add(Calendar.HOUR_OF_DAY,1);
+        this.estimatedArrivalTime = new SimpleDateFormat("HH:mm:ss").format(cal.getTime());
     }
 
     public int getBoardingPassNumber() {
@@ -117,8 +118,8 @@ public class BoardingPass {
                 "Date: " + strDate + "\n" +
                 "Origin: " + origin + "\n" +
                 "Destination: " + destination + "\n" +
-                "Estimated Arrival Time: " + estimatedArrivalTime + "\n" +
-                "Departure Time: " + departureTime + "\n\n" +
+                "Departure Time: " + departureTime + "\n" +
+                "Estimated Arrival Time: " + estimatedArrivalTime + "\n\n" +
                 "PASSENGER INFORMATION\n" +
                 "Name: " + name + "\n" +
                 "Email: " + email + "\n" +
