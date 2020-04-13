@@ -1,11 +1,14 @@
 package com.boardingpass;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Locale;
 
 public class BoardingPass {
     private int age, boardingPassNumber;
     private String name, email, phoneNumber, gender, origin, destination, departureTime, estimatedArrivalTime, strDate;
-    private double ticketPrice;
+    private String ticketPrice;
 
     public BoardingPass(String name, String email, String phoneNumber, String gender, int age,
                         String destination, String departureTime){
@@ -96,17 +99,17 @@ public class BoardingPass {
         this.departureTime = departureTime;
     }
 
-    public double setPriceWithAgeAndGender(int theAge){
+    public String setPriceWithAgeAndGender(int theAge){
         double price = 100.0;
         if(theAge <= 12)
             price *= 0.5;
         else if(theAge >= 60){
             String getGender = gender.toLowerCase();
             price *= 0.4;
-            if(getGender.equals("f") || getGender.equals("female"))
+            if(getGender.equals("f"))
                 price *= 0.75;
         }
-        return price;
+        return NumberFormat.getCurrencyInstance(Locale.US).format(price);
     }
     public String toString(){
         return  "BOARDING PASS INFORMATION\n" +
