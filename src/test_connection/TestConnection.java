@@ -13,7 +13,7 @@ public class TestConnection {
         try{
             System.out.println("Connecting to database: " + jdbcUrl);
             Connection myConn = DriverManager.getConnection(jdbcUrl, user, password);
-            System.out.println("Connection successful!!!");
+            System.out.println("Beep boop beep... ... ... Connection test successful!");
         }
         catch (Exception e){
             e.printStackTrace();

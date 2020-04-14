@@ -5,9 +5,18 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import java.util.Scanner;
+
 public class CRUDQ {
+    static Scanner scanner = new Scanner(System.in);
     //create passenger obj entity method
     //public static void createPassenger() {
+
+    public static String getInput (String message){
+        System.out.println(message);
+        return scanner.nextLine();
+    }
+
     public static void createPassenger() {
 
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
@@ -20,7 +29,17 @@ public class CRUDQ {
         try {
             //create passenger object(s)
             System.out.println("Creating passenger object(s)...");
-            Passenger tempPassenger = new Passenger("Ellie", "Ingram", "ellie@code.com", "777-777-7777", "05/22/2020", "San Antonio, TX", "Charlotte, NC", "17:05", "14:00");
+//            Passenger tempPassenger = new Passenger("Ellie", "Ingram", "ellie@code.com", "777-777-7777", "05/22/2020", "San Antonio, TX", "Charlotte, NC", "17:05", "14:00");
+            Passenger tempPassenger = new Passenger(
+                    getInput("Enter first name"),
+                    getInput("Enter last name"),
+                    getInput("Enter email"),
+                    getInput("Enter phone number"),
+                    getInput("Enter flight date"),
+                    getInput("Enter origin location ('City, ST')"),
+                    getInput("Enter destination location ('City, ST')"),
+                    getInput("Enter expected time arrival ('HH:MM')"),
+                    getInput("Enter departure time ('HH:MM')"));
 //            Passenger tempStudent1 = new Passenger("Laila", "Lindsay", "laila@code.com");
 //            Passenger tempStudent2 = new Passenger("Jill", "Jack", "jill@code.com");
 
@@ -101,7 +120,7 @@ public class CRUDQ {
         Session session = factory.getCurrentSession();
 
         try{
-            int boarding_passID = 32;
+            int boarding_passID = Integer.parseInt(getInput("Enter the boarding pass ID you're looking to update"));
             //Get a new session and start a transaction
             session = factory.getCurrentSession();
             session.beginTransaction();
@@ -112,7 +131,7 @@ public class CRUDQ {
 
             //Updating the student first Name at primary key 1
             System.out.println("Updating Passenger...");
-            myPassenger.setFirstName("Jefe");
+            myPassenger.setFirstName(getInput("Enter the new first name you'd like to update"));
 
             //commit the transaction
             session.getTransaction().commit();
@@ -148,7 +167,7 @@ public class CRUDQ {
         Session session = factory.getCurrentSession();
 
         try{
-            int boarding_passID = 1; //need to update this to take int scanner input rather than fixed ID [to avoid null value error exceptions]
+            int boarding_passID = Integer.parseInt(getInput("Enter the boarding pass ID you're looking to delete")); //need to update this to take int scanner input rather than fixed ID [to avoid null value error exceptions]
             //Get a new session and start a transaction
             session = factory.getCurrentSession();
             session.beginTransaction();
