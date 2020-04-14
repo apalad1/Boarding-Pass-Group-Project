@@ -47,7 +47,7 @@ public class CRUDQ {
             session.beginTransaction();
             System.out.println("Beginning transaction...");
 
-            //save the student object
+            //save the passenger object
             session.save(tempPassenger);
 //            session.save(tempStudent1);
 //            session.save(tempStudent2);
@@ -80,7 +80,7 @@ public class CRUDQ {
             session.beginTransaction();
             System.out.println("Beginning transaction...");
 
-            //save the student object
+            //save the passenger object
             System.out.println("Saving the new passenger...");
             System.out.println(tempPassenger);
             session.save(tempPassenger);
@@ -90,14 +90,14 @@ public class CRUDQ {
 
             //***********************************************************************************
             //***Code for Reading the object***
-            //find out the student's id: primary key
+            //find out the passenger's id: primary key
             System.out.println("Saved the passenger. Generated boarding pass id: " + tempPassenger.getId());
 
             //Get a new session and start a transaction
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-            //Retrieve student based on the id: primary key
+            //Retrieve passenger based on the id: primary key
             System.out.println("\nGetting passenger with boarding pass id: " + tempPassenger.getId());
             Passenger myPassenger = session.get(Passenger.class, tempPassenger.getId());
             System.out.println("Get Completed: " + myPassenger);
@@ -125,11 +125,11 @@ public class CRUDQ {
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-            //Retrieve student based on the id: primary key
-            System.out.println("\nGetting student with id: " + boarding_passID);
+            //Retrieve passenger based on the id: primary key
+            System.out.println("\nGetting passenger with id: " + boarding_passID);
             Passenger myPassenger = session.get(Passenger.class, boarding_passID);
 
-            //Updating the student first Name at primary key 1
+            //Updating the passenger first Name at primary key 1
             System.out.println("Updating Passenger...");
             myPassenger.setFirstName(getInput("Enter the new first name you'd like to update"));
 
