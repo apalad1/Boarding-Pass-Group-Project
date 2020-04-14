@@ -7,7 +7,7 @@ public class TestConnection {
 
     public static void main(String[] args) {
         //The code below is to check to make sure you have a database connection with MySQL
-        String jdbcUrl = "jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&serverTimezone=UTC";
+        String jdbcUrl = "jdbc:mysql://localhost:3306/airline?useSSL=false&serverTimezone=UTC";
         String user = "hbstudent";
         String password = "hbstudent"; // You can change the password to check to see if it throws an exception.
         try{
