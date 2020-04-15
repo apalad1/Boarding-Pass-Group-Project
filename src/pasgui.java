@@ -34,46 +34,110 @@ public class pasgui extends JFrame{
 
 
     public void panels(){
-        frame2.setSize(500,400);
+        frame2.setSize(700,400);
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame2.setLayout(new GridLayout(3,3));
+        frame2.setLayout(new GridLayout(3,6));
 
-        JLabel nametxt = new JLabel(name, JLabel.CENTER);               //block for the users name that they put it showing back on the new frame/pass visual
+        String nametxtlabel = "Name: ";
+        JLabel nametxt = new JLabel(nametxtlabel, JLabel.LEFT);               //block for the LABEL FOR NAME
         nametxt.setLayout(new GridLayout(1,1));
         nametxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(nametxt);
 
-        JLabel agetxt = new JLabel(age, JLabel.CENTER);                 //block for age
-        agetxt.setLayout(new GridLayout(1,2));
+        JLabel nameinput = new JLabel(name, JLabel.CENTER);                     ///////////////BLOCK FOR THE USER INPUT FOR NAME
+        nameinput.setLayout(new GridLayout(1,2));
+        nameinput.setFont(new Font("Serif",Font.PLAIN, 16));
+        frame2.add(nameinput);
+
+
+        String agetxtlabel = "Age: ";
+        JLabel agetxt = new JLabel(agetxtlabel, JLabel.LEFT);                 //block for LABEL FOR AGE
+        agetxt.setLayout(new GridLayout(1,3));
         agetxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(agetxt);
 
-        JLabel gendertxt = new JLabel(gender, JLabel.CENTER);                 //block for gender
-        gendertxt.setLayout(new GridLayout(1,3));
+        JLabel ageinput = new JLabel(age, JLabel.CENTER);                     ///////////////BLOCK FOR THE USER INPUT FOR AGE
+        ageinput.setLayout(new GridLayout(1,4));
+        ageinput.setFont(new Font("Serif",Font.PLAIN, 16));
+        frame2.add(ageinput);
+
+
+        String gendertxtlabel = "Gender: ";
+        JLabel gendertxt = new JLabel(gendertxtlabel, JLabel.LEFT);                 //block for gender
+        gendertxt.setLayout(new GridLayout(1,5));
         gendertxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(gendertxt);
 
-        JLabel phonetxt = new JLabel(phone, JLabel.CENTER);                 //block for phone
+        JLabel genderinput = new JLabel(gender, JLabel.CENTER);                     ///////////////BLOCK FOR THE USER INPUT FOR AGE
+        genderinput.setLayout(new GridLayout(1,6));
+        genderinput.setFont(new Font("Serif",Font.PLAIN, 16));
+        frame2.add(genderinput);
+
+        ///////////////////////2ND ROW//////////////////////////////////////////////////////////////////////////////
+
+        String phonetxtlabel = "Phone#: ";
+        JLabel phonetxt = new JLabel(phonetxtlabel, JLabel.LEFT);                 //block for phone
         phonetxt.setLayout(new GridLayout(2,1));
         phonetxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(phonetxt);
 
-        JLabel emailtxt = new JLabel(email, JLabel.CENTER);                 //block for phone
-        emailtxt.setLayout(new GridLayout(2,2));
+        JLabel phoneinput = new JLabel(phone, JLabel.CENTER);                     ///////////////BLOCK FOR THE USER INPUT FOR PHONE
+        phoneinput.setLayout(new GridLayout(2,2));
+        phoneinput.setFont(new Font("Serif",Font.PLAIN, 16));
+        frame2.add(phoneinput);
+
+        String emailtxtlabel = "Email: ";
+        JLabel emailtxt = new JLabel(emailtxtlabel, JLabel.LEFT);                 //block for email
+        emailtxt.setLayout(new GridLayout(2,3));
         emailtxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(emailtxt);
 
-        JLabel idtxt = new JLabel("id", JLabel.CENTER);                 //BOARDING PASS ID IS NEEDED HERE******************************
-        emailtxt.setLayout(new GridLayout(2,3));
+        JLabel emailinput = new JLabel(email, JLabel.CENTER);                     ///////////////BLOCK FOR THE USER INPUT FOR EMAIL
+        emailinput.setLayout(new GridLayout(2,4));
+        emailinput.setFont(new Font("Serif",Font.PLAIN, 16));
+        frame2.add(emailinput);
+
+
+        String idtxtlabel = "id: ";                                         //<-----------------BOARDING PASS ID IS NEEDED HERE!!!!!!!!!!!!!!!!!
+        JLabel idtxt = new JLabel(idtxtlabel, JLabel.LEFT);
+        emailtxt.setLayout(new GridLayout(2,5));
         emailtxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(idtxt);
 
-        JLabel destinationtxt = new JLabel(destination, JLabel.CENTER);                 //BOARDING PASS ID IS NEEDED HERE******************************
+        JLabel idinput = new JLabel("fill this in", JLabel.CENTER);                     ///////////////BLOCK FOR THE GENERATED ID
+        idinput.setLayout(new GridLayout(2,6));
+        idinput.setFont(new Font("Serif",Font.PLAIN, 16));
+        frame2.add(idinput);
+
+        //////////////////////3RD ROW //////////////////////////////////////////////////////////////////////////
+
+        String destinationtxtlabel = "Destination: ";
+        JLabel destinationtxt = new JLabel(destinationtxtlabel, JLabel.LEFT);                 //block for destination
         destinationtxt.setLayout(new GridLayout(3,1));
         destinationtxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(destinationtxt);
 
+        JLabel destinationinput = new JLabel(destination, JLabel.LEFT);                 //block for destination input
+        destinationinput.setLayout(new GridLayout(3,2));
+        destinationinput.setFont(new Font("Serif",Font.PLAIN, 16));
+        frame2.add(destinationinput);
 
+
+        JLabel blank1 = new JLabel("", JLabel.LEFT);                            //need the blanks so the grid doesnt look like sht
+        blank1.setLayout(new GridLayout(3,3));                              //for maintaining the 3row x 6 col structure of the grid
+        frame2.add(blank1);
+
+        JLabel blank2 = new JLabel("", JLabel.LEFT);
+        blank2.setLayout(new GridLayout(3,4));
+        frame2.add(blank2);
+
+        JLabel blank3 = new JLabel("", JLabel.LEFT);
+        blank3.setLayout(new GridLayout(3,5));
+        frame2.add(blank3);
+
+        JLabel blank4 = new JLabel("", JLabel.LEFT);
+        blank4.setLayout(new GridLayout(3,6));
+        frame2.add(blank4);
     }
 
     public pasgui() {
@@ -96,7 +160,21 @@ public class pasgui extends JFrame{
 
                 panels();
                 frame2.setVisible(true);
+
+                if(frame2.isVisible() == true){
+                    name_field.setEditable(false);
+                    phone_field.setEditable(false);
+                    age_field.setEditable(false);
+                    destination_field.setEditable(false);
+                    email_field.setEditable(false);
+                    gender_combobox.setEditable(false);
+                    submit_button.setEnabled(false);
+
+                }
+
             }
+
+
         });
 
 
