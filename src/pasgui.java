@@ -117,11 +117,14 @@ public class pasgui extends JFrame{
         goback.setLayout(new GridLayout(3,6));
         searchframe.add(goback);
 
+
+        //WHEN THE BUTTON FROM THE SEARCHED POPUPFRAME TO GO BACK TO THE INITIAL FRAME IS PRESSED
         goback.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 submit_button.setEnabled(true);
-
+                tosearch_button.setEnabled(true);
+//
                 searchframe.remove(goback);
 
                 searchframe.remove(snamelabel); searchframe.remove(snameinput);
@@ -285,6 +288,8 @@ public class pasgui extends JFrame{
                 submit_button.setEnabled(true);
                 tosearch_button.setEnabled(true);
                 searchid_field.setEditable(true);
+
+
             }
         });
 
@@ -342,10 +347,12 @@ public class pasgui extends JFrame{
                         searchframepanel();
                         searchframe.setVisible(true);
                         submit_button.setEnabled(false);
+                        tosearch_button.setEnabled(false);
 
                 }catch (Exception notanum){
                     JOptionPane.showMessageDialog(null, "Please Enter an ID number");
                     searchframe.setVisible(false);                                                      //dont show searchframe if they enter jank
+
                 }
 
 

@@ -8,6 +8,7 @@ the GUI consists of 3 forms:
 
 1) anything that says "need help db", thats the popup searched form (#3) that needs the "need help db" strings to
     be replaced with a variable containing the dbs info on stuff like name, phone etc
+    ^ found in "public void searchframepanel()"
 
 
 2) 'publicpasgui()' has a 'submit_button' actionlistener below it, thats the stuff that happens when the
