@@ -32,28 +32,19 @@ public class boardingPassCRUDQ {
         try {
             //create passenger object(s)
             System.out.println("Creating passenger object(s)...");
-//            BoardingPass_Entity tempPass = new BoardingPass_Entity("test testington", "test@gmail.com", "777-777-7777", "m", 92, "11/11/2020", "Tst, MT", "Test, NC", "15:00", "12:00", "$400.00");
-////            BoardingPass_Entity tempPassenger = new BoardingPass_Entity("Ellie", "Ingram", "ellie@code.com", "777-777-7777", "05/22/2020", "San Antonio, TX", "Charlotte, NC", "17:05", "14:00");
+
             BoardingPass_Entity tempPass = new BoardingPass_Entity(
                     getInput("Enter name"),
                     getInput("Enter email"),
                     getInput("Enter phone number"),
                     getInput("Enter gender"),
                     Integer.parseInt(getInput("Enter age number")),
-                    //22,
-                    getInput("Enter flight date"),
+                    getInput("Enter flight date ('MM/DD/YYYY')"),
                     getInput("Enter origin location ('City, ST')"),
                     getInput("Enter destination location ('City, ST')"),
                     getInput("Enter expected time arrival ('HH:MM')"),
                     getInput("Enter departure time ('HH:MM')"),
                     getInput("Enter the ticket price"));
-                    //new BoardingPass_Entity().setPriceWithAgeAndGender(Integer.parseInt(getInput("What was the age?"))));
-                    //new BoardingPass_Entity().getTicketPrice());
-                    //"$200.00");
-                    //getInput("Enter price"));
-                    //getInput("Ticket price"));
-//            BoardingPass_Entity tempStudent1 = new BoardingPass_Entity("Laila", "Lindsay", "laila@code.com");
-//            BoardingPass_Entity tempStudent2 = new BoardingPass_Entity("Jill", "Jack", "jill@code.com");
 
             //start a transaction
             session.beginTransaction();
