@@ -1,0 +1,19 @@
+Just about everything is done, except the actual linking
+
+the GUI consists of 3 forms:
+1- the initial form to fill in the user info
+2- the submitted form with the info they put in
+3- the search form that pops up when they type an number 'id' into the initial form
+
+
+1) anything that says "need help db", thats the popup searched form (#3) that needs the "need help db" strings to
+    be replaced with a variable containing the dbs info on stuff like name, phone etc
+
+
+2) 'publicpasgui()' has a 'submit_button' actionlistener below it, thats the stuff that happens when the
+    submit button is pressed, name/age/phone/destination etc are all storing the .getText stuff the user filled in
+    the forms. Those variables need to be sent to the db
+
+
+IN SUMMARY, it needs to send the variables that are stored after the user typed in stuff to the form
+when they press 'submit button' those stored variables need to be sent to the db

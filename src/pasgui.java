@@ -39,19 +39,111 @@ public class pasgui extends JFrame{
         searchframe.setSize(700,400);
         searchframe.setLayout(new GridLayout(3,6));
 
-        JButton goback = new JButton("Go Back");                    //block for the goback button when youre on the searchframe
-        goback.setLayout(new GridLayout(1,1));
+        JLabel snamelabel = new JLabel("Name: ", JLabel.LEFT);
+        snamelabel.setLayout(new GridLayout(1,1));
+        searchframe.add(snamelabel);
 
+        JLabel snameinput = new JLabel("send help DB!");                       //THIS NEEEDS THE DB INFO
+        snameinput.setLayout(new GridLayout(1,2));                          //FOR NAME
+        searchframe.add(snameinput);
+
+        JLabel sagelabel = new JLabel("Age: ", JLabel.LEFT);
+        sagelabel.setLayout(new GridLayout(1,3));
+        searchframe.add(sagelabel);
+
+        JLabel sageinput = new JLabel("send help DB!");                       //THIS NEEEDS THE DB INFO
+        sageinput.setLayout(new GridLayout(1,4));                           //FOR AGE
+        searchframe.add(sageinput);
+
+        JLabel sgenderlabel = new JLabel("Gender: ", JLabel.LEFT);
+        sgenderlabel.setLayout(new GridLayout(1,5));
+        searchframe.add(sgenderlabel);
+
+        JLabel sgenderinput = new JLabel("send help DB!");                       //THIS NEEEDS THE DB INFO
+        sgenderinput.setLayout(new GridLayout(1,6));                        //FOR GENDER
+        searchframe.add(sgenderinput);
+
+        ////////////////2ND ROW /////////////////////////////////////////
+        JLabel sphonelabel = new JLabel("Phone#: ", JLabel.LEFT);
+        sphonelabel.setLayout(new GridLayout(2,1));
+        searchframe.add(sphonelabel);
+
+        JLabel sphoneinput = new JLabel("send help DB!");                       //THIS NEEEDS THE DB INFO
+        sphoneinput.setLayout(new GridLayout(2,2));                        //FOR PHONE
+        searchframe.add(sphoneinput);
+
+        //email
+        JLabel semaillabel = new JLabel("Email: ", JLabel.LEFT);
+        semaillabel.setLayout(new GridLayout(2,3));
+        searchframe.add(semaillabel);
+
+        JLabel semailinput = new JLabel("send help DB!");                       //THIS NEEEDS THE DB INFO
+        semailinput.setLayout(new GridLayout(2,4));                        //FOR   EMAIL
+        searchframe.add(semailinput);
+
+        //id , searchid is the variable for the userinput on the searchtextfield
+        JLabel sidlabel = new JLabel("Id: ", JLabel.LEFT);
+        sidlabel.setLayout(new GridLayout(2,5));
+        searchframe.add(sidlabel);
+
+        JLabel sidinput = new JLabel(Integer.toString(searchid));
+        sidinput.setLayout(new GridLayout(2,6));
+        searchframe.add(sidinput);
+
+        ///////3RD ROW /////////////////////////////////////////////////////////
+        //destination
+        JLabel sdestinationlabel = new JLabel("Destination: ", JLabel.LEFT);
+        sdestinationlabel.setLayout(new GridLayout(3,1));
+        searchframe.add(sdestinationlabel);
+
+        JLabel sdestinationinput = new JLabel("send help DB!");
+        sdestinationinput.setLayout(new GridLayout(3,2));
+        searchframe.add(sdestinationinput);
+
+        //blanks to keep the structure intact for the grid
+        JLabel sblank1 = new JLabel("");
+        sblank1.setLayout(new GridLayout(3,3));
+        searchframe.add(sblank1);
+
+        JLabel sblank2 = new JLabel("");
+        sblank2.setLayout(new GridLayout(3,4));
+        searchframe.add(sblank2);
+
+        JLabel sblank3 = new JLabel("");
+        sblank3.setLayout(new GridLayout(3,5));
+        searchframe.add(sblank3);
+
+        JButton goback = new JButton("Go Back");                    //block for the goback button when youre on the searchframe
+        goback.setLayout(new GridLayout(3,6));
         searchframe.add(goback);
+
         goback.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 submit_button.setEnabled(true);
+
                 searchframe.remove(goback);
+
+                searchframe.remove(snamelabel); searchframe.remove(snameinput);
+                searchframe.remove(sagelabel); searchframe.remove(sageinput);
+                searchframe.remove(sgenderlabel); searchframe.remove(sgenderinput);
+
+                searchframe.remove(sphonelabel); searchframe.remove(sphoneinput);
+                searchframe.remove(semaillabel); searchframe.remove(semailinput);
+                searchframe.remove(sidlabel); searchframe.remove(sidinput);
+
+                searchframe.remove(sdestinationlabel); searchframe.remove(sdestinationinput);
+                searchframe.remove(sblank1);
+                searchframe.remove(sblank2);
+                searchframe.remove(sblank3);
+
+
                 searchframe.setVisible(false);
                 searchid_field.setText("");
             }
         });
+
+
     }
 
     public void panels(){
