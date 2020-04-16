@@ -12,8 +12,7 @@ import java.util.Scanner;
 
 public class boardingPassCRUDQ {
     static Scanner scanner = new Scanner(System.in);
-    //create passenger obj entity method
-    //public static void createPassenger() {
+    //create boarding pass [entity] method
 
     public static String getInput (String message){
         System.out.println(message);
@@ -50,15 +49,14 @@ public class boardingPassCRUDQ {
             session.beginTransaction();
             System.out.println("Beginning transaction...");
 
-            //save the passenger object
+            //save the boarding pass object
             session.save(tempPass);
-//            session.save(tempStudent1);
-//            session.save(tempStudent2);
             System.out.println("Saving the new passenger(s)...");
 
             //commit the transaction
             session.getTransaction().commit();
             System.out.println(".. ... .... ..... \n Create Task Completed!");
+            System.out.println();
         } catch (Exception e) {
             System.out.println("ID couldn't be found, enter another one!");
         }finally {
@@ -93,6 +91,7 @@ public class boardingPassCRUDQ {
             //commit the transaction
             session.getTransaction().commit();
             System.out.println(".. ... .... \nRetrieve Task Completed!");
+            System.out.println();
         } catch (Exception e) {
             System.out.println("ID couldn't be found, enter another one!");
         }finally {
@@ -133,50 +132,42 @@ public class boardingPassCRUDQ {
             Scanner updateScan = new Scanner(System.in);
             String updateOption = updateScan.nextLine();
 
+
             if(updateOption.equals("1")) {
-                //myPassenger.setName(getInput("Enter the new name you'd like to update"));
+                myPassenger.setName(getInput("Enter the new name you'd like to update"));
                 System.out.println("Updating name for the passenger(s)...");
-                session.createQuery("UPDATE BoardingPass_Entity SET name = " +  " " + getInput("Enter new name")  + " " +  "WHERE id =" + " " + myPassenger.getId()).executeUpdate();
             }
             else if (updateOption.equals("2")) {
                 myPassenger.setEmail(getInput("Enter the new email you'd like to update"));
                 System.out.println("Updating email for the passenger(s)...");
-                session.createQuery("update BoardingPass_Entity set email =" + " " + getInput("Enter the new email") + " " + "where email=" + " " + myPassenger.getId()).executeUpdate();
             }
             else if(updateOption.equals("3")) {
                 myPassenger.setPhone_num(getInput("Enter the new phone number you'd like to update"));
                 System.out.println("Updating phone number for the passenger(s)...");
-                session.createQuery("update BoardingPass_Entity set phone_num=" + " " + getInput("Enter the new phone number") + " " + "where phone_num =" + " " + myPassenger.getId()).executeUpdate();
             }
             else if(updateOption.equals("4")) {
                 myPassenger.setDate(getInput("Enter the new date you'd like to update"));
                 System.out.println("Updating date for the passenger(s)...");
-                session.createQuery("update BoardingPass_Entity set date =" + " " + getInput("Enter the new date") + " " + "where date =" + " " + myPassenger.getId()).executeUpdate();
             }
             else if(updateOption.equals("5")) {
                 myPassenger.setOrigin(getInput("Enter the new origin location you'd like to update"));
                 System.out.println("Updating origin location for the passenger(s)...");
-                session.createQuery("update BoardingPass_Entity set origin =" + " " + getInput("Enter the new origin location") + " " + "where origin_location =" + " " + myPassenger.getId()).executeUpdate();
             }
             else if(updateOption.equals("6")) {
                 myPassenger.setDestination(getInput("Enter the new destination you'd like to update"));
                 System.out.println("Updating destination location for the passenger(s)...");
-                session.createQuery("update BoardingPass_Entity set destination =" + " " + getInput("Enter the new destination location") + " " + "where destination_location =" + " " + myPassenger.getId()).executeUpdate();
             }
             else if(updateOption.equals("7")) {
                 myPassenger.setETA(getInput("Enter the new estimated time arrival you'd like to update"));
                 System.out.println("Updating estimated time arrival for the passenger(s)...");
-                session.createQuery("update BoardingPass_Entity set ETA =" + " " + getInput("Enter the new ETA") + " " + "where ETA =" + " " + myPassenger.getId()).executeUpdate();
             }
             else if(updateOption.equals("8")) {
                 myPassenger.setDepartureTime(getInput("Enter the new departure time you'd like to update"));
                 System.out.println("Updating departure time for the passenger(s)...");
-                session.createQuery("update BoardingPass_Entity set departure_time =" + " " + getInput("Enter the new departure time") + " " + "where departure_time =" + " " + myPassenger.getId()).executeUpdate();
             }
             else if(updateOption.equals("9")) {
                 myPassenger.setTicketPrice(getInput("Enter the new ticket price you'd like to update"));
                 System.out.println("Updating price for the passenger(s)...");
-                session.createQuery("update BoardingPass_Entity set ticket_price =" + " " + getInput("Enter the new price") + " " + "where ticket_price =" + " " + myPassenger.getId()).executeUpdate();
             }
 
             //commit the transaction
@@ -187,21 +178,14 @@ public class boardingPassCRUDQ {
             session = factory.getCurrentSession();
             session.beginTransaction();
 
-            //Update email for all students
-            //System.out.println("Updating email for the passenger(s)...");
-//            session.createQuery("update BoardingPass_Entity set email='foo@gmail.com'").executeUpdate();
-//            //or you can use a where clause to be more precise
-//            session.createQuery("update BoardingPass_Entity set email='too@gmail.com' where email='foo@gmail.com'").executeUpdate();
-
             //commit the transaction
             session.getTransaction().commit();
             System.out.println(".. ... .... \nUpdate Task Completed!");
+            System.out.println();
         }
             finally {
             factory.close();
         }
-
-
     }
 
     //delete passenger method
@@ -234,12 +218,11 @@ public class boardingPassCRUDQ {
             //commit the transaction
             session.getTransaction().commit();
             System.out.println(".. .... ....... Delete Task Completed!");
+            System.out.println();
         } catch (Exception e) {
             System.out.println("ID couldn't be found, enter another one!");
         }finally {
             factory.close();
         }
-
     }
-
 }

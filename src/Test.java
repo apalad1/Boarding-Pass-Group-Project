@@ -37,11 +37,14 @@ public class Test {
                 } else if (userChoice.equals("5")) {
                     break;
                 }
+                else{
+                    System.out.println("Enter a valid number buddy");
+                }
                 //boardingPassCRUDQ.createBoardingPass();
 //            boardingPassCRUDQ.removeBoardingPass();
             }
         } catch (Exception except){
-            System.out.println("Enter a valid number stinky boy");
+            System.out.println("Stop trying to break me code");
         }
     }
 }
