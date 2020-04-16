@@ -22,16 +22,37 @@ public class pasgui extends JFrame{
     private JLabel gender_label;
     private JTextField destination_field;
     private JLabel destination_label;
+    private JButton tosearch_button;
+    private JTextField searchid_field;
 
 
     static String name; static String email; static String phone; static String age; static String gender;
     static String destination;
+
+    static int searchid;
+
     JFrame frame2 = new JFrame("PassDisplay");
 
-    //JLabel frame2namelabel = new JLabel("Name: ");
-    JLabel frame2namefield = new JLabel(name);
+    JFrame searchframe = new JFrame("search bar");
 
+    public void searchframepanel(){
+        searchframe.setSize(700,400);
+        searchframe.setLayout(new GridLayout(3,6));
 
+        JButton goback = new JButton("Go Back");                    //block for the goback button when youre on the searchframe
+        goback.setLayout(new GridLayout(1,1));
+
+        searchframe.add(goback);
+        goback.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                submit_button.setEnabled(true);
+                searchframe.remove(goback);
+                searchframe.setVisible(false);
+                searchid_field.setText("");
+            }
+        });
+    }
 
     public void panels(){
         frame2.setSize(700,400);
@@ -56,7 +77,7 @@ public class pasgui extends JFrame{
         agetxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(agetxt);
 
-        JLabel ageinput = new JLabel(age, JLabel.CENTER);                     ///////////////BLOCK FOR THE USER INPUT FOR AGE
+         JLabel ageinput = new JLabel(age, JLabel.CENTER);                     ///////////////BLOCK FOR THE USER INPUT FOR AGE
         ageinput.setLayout(new GridLayout(1,4));
         ageinput.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(ageinput);
@@ -117,7 +138,7 @@ public class pasgui extends JFrame{
         destinationtxt.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(destinationtxt);
 
-        JLabel destinationinput = new JLabel(destination, JLabel.LEFT);                 //block for destination input
+        JLabel destinationinput = new JLabel(destination, JLabel.CENTER);                 //block for destination input
         destinationinput.setLayout(new GridLayout(3,2));
         destinationinput.setFont(new Font("Serif",Font.PLAIN, 16));
         frame2.add(destinationinput);
@@ -135,10 +156,49 @@ public class pasgui extends JFrame{
         blank3.setLayout(new GridLayout(3,5));
         frame2.add(blank3);
 
-        JLabel blank4 = new JLabel("", JLabel.LEFT);
-        blank4.setLayout(new GridLayout(3,6));
-        frame2.add(blank4);
+        //JLabel blank4 = new JLabel("", JLabel.LEFT);
+        //blank4.setLayout(new GridLayout(3,6));
+        //frame2.add(blank4);
+
+        JButton gotoform = new JButton("Go Back to Form");
+        gotoform.setLayout(new GridLayout(3,6));
+        frame2.add(gotoform);
+
+        /////////////////////FOR WHEN THE BUTTON TO GO FROM THE PASSDISPLAY TO THE MAIN FORM IS PRESSED
+        gotoform.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                frame2.setVisible(false);
+
+                //REMOVE ALL THE PREVIOUS LABELS SO THAT WHEN THEY SUBMIT INFO AGAIN ITS FRESH
+                frame2.remove(nametxt); frame2.remove(nameinput);
+                frame2.remove(agetxt); frame2.remove(ageinput);
+                frame2.remove(gendertxt); frame2.remove(genderinput);
+                frame2.remove(phonetxt); frame2.remove(phoneinput);
+                frame2.remove(emailtxt); frame2.remove(emailinput);
+                frame2.remove(destinationtxt);frame2.remove(destinationinput);
+                frame2.remove(idtxt); frame2.remove(idinput);
+                frame2.remove(blank1);
+                frame2.remove(blank2);
+                frame2.remove(blank3);
+                frame2.remove(gotoform);
+
+                //MAKE THE FIELDS EDITABLE AND WIPE THE PREVIOUS TEXT
+                name_field.setEditable(true); name_field.setText("");
+                phone_field.setEditable(true); phone_field.setText("");
+                age_field.setEditable(true); age_field.setText("");
+                destination_field.setEditable(true); destination_field.setText("");
+                email_field.setEditable(true); email_field.setText("");
+                gender_combobox.setEditable(true); gender_combobox.setSelectedItem("");
+                submit_button.setEnabled(true);
+                tosearch_button.setEnabled(true);
+                searchid_field.setEditable(true);
+            }
+        });
+
     }
+
+
 
     public pasgui() {
         submit_button.addActionListener(new ActionListener() {              //when the submit is pressed
@@ -153,7 +213,7 @@ public class pasgui extends JFrame{
                 destination = destination_field.getText();
 
                 //print on console
-                System.out.println(print_to_console(name, age, gender, phone, email));
+                System.out.println(print_to_console(name, age, gender, phone, email, destination));
 
                 JOptionPane.showMessageDialog(null, "Submitting your info");
                 //frame 2 displays pass
@@ -169,7 +229,8 @@ public class pasgui extends JFrame{
                     email_field.setEditable(false);
                     gender_combobox.setEditable(false);
                     submit_button.setEnabled(false);
-
+                    tosearch_button.setEnabled(false);
+                    searchid_field.setEditable(false);
                 }
 
             }
@@ -178,6 +239,28 @@ public class pasgui extends JFrame{
         });
 
 
+
+        //FOR WHEN THE SEARCH BUTTON IS PRESSED TO LOOK FOR THE ID
+        tosearch_button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                try{
+                    searchid = Integer.parseInt(searchid_field.getText());                        //assign the id that the user put in
+                        searchframepanel();
+                        searchframe.setVisible(true);
+                        submit_button.setEnabled(false);
+
+                }catch (Exception notanum){
+                    JOptionPane.showMessageDialog(null, "Please Enter an ID number");
+                    searchframe.setVisible(false);                                                      //dont show searchframe if they enter jank
+                }
+
+
+
+
+            }
+        });
 
         age_field.addKeyListener(new KeyAdapter() {                 //restrict them from putting in a letter as age
             @Override
@@ -232,8 +315,9 @@ public class pasgui extends JFrame{
 
     }
 
-    static String print_to_console(String name, String age, String gender, String phone, String email){
-        String reciept = "Name: " + name + "| Age: " + age + " | Gender: " + gender + "\r\n" + "Phone#: " + phone + "\r\n" + "Email: " + email;
+    static String print_to_console(String name, String age, String gender, String phone, String email, String destination){
+        String reciept = "Name: " + name + "| Age: " + age + " | Gender: " + gender + "\r\n" + "Phone#: " + phone + "\r\n" + "Email: " + email + "\r\n"
+                + "Destination: " + destination;
         return reciept;
     }
 
