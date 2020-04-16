@@ -58,8 +58,10 @@ public class boardingPassCRUDQ {
 
             //commit the transaction
             session.getTransaction().commit();
-            System.out.println("Done!");
-        } finally {
+            System.out.println(".. ... .... ..... \n Create Task Completed!");
+        } catch (Exception e) {
+            System.out.println("ID couldn't be found, enter another one!");
+        }finally {
             factory.close();
         }
     }
@@ -86,12 +88,14 @@ public class boardingPassCRUDQ {
             //Retrieve passenger based on the id: primary key
             System.out.println("\nGetting passenger with boarding pass id: " + boarding_passID);
             BoardingPass_Entity myPassenger = session.get(BoardingPass_Entity.class, boarding_passID);
-            System.out.println("Get Completed: " + myPassenger);
+            System.out.println("Retrieve successful: " + myPassenger);
 
             //commit the transaction
             session.getTransaction().commit();
-            System.out.println("Done!");
-        } finally {
+            System.out.println(".. ... .... \nRetrieve Task Completed!");
+        } catch (Exception e) {
+            System.out.println("ID couldn't be found, enter another one!");
+        }finally {
             factory.close();
         }
     }
@@ -191,8 +195,9 @@ public class boardingPassCRUDQ {
 
             //commit the transaction
             session.getTransaction().commit();
-            System.out.println("Done!");
-        } finally {
+            System.out.println(".. ... .... \nUpdate Task Completed!");
+        }
+            finally {
             factory.close();
         }
 
@@ -228,8 +233,10 @@ public class boardingPassCRUDQ {
 
             //commit the transaction
             session.getTransaction().commit();
-            System.out.println("Done!");
-        } finally {
+            System.out.println(".. .... ....... Delete Task Completed!");
+        } catch (Exception e) {
+            System.out.println("ID couldn't be found, enter another one!");
+        }finally {
             factory.close();
         }
 

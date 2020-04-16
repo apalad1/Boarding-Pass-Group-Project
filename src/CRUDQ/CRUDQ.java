@@ -104,7 +104,7 @@ public class CRUDQ {
 
             //commit the transaction
             session.getTransaction().commit();
-            System.out.println("Done!");
+            System.out.println(".. ... .... \nRead Task Completed!");
         } finally {
             factory.close();
         }
@@ -149,7 +149,7 @@ public class CRUDQ {
 
             //commit the transaction
             session.getTransaction().commit();
-            System.out.println("Done!");
+            System.out.println(".. ... .... \nRetrieve Task Completed");
         } finally {
             factory.close();
         }
@@ -186,7 +186,7 @@ public class CRUDQ {
 
             //commit the transaction
             session.getTransaction().commit();
-            System.out.println("Done!");
+            System.out.println(".. ... ....\nDelete Task Completed");
         } finally {
             factory.close();
         }

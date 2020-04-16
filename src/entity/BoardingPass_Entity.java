@@ -167,19 +167,18 @@ public class BoardingPass_Entity {
     @Override
     public String toString() {
         return "Boarding Pass Details{" +
-                "boarding pass number=" + id +
-                ", name='" + name+ '\'' +
-                ", email='" + email + '\'' +
-
-                ", phone number='" + phoneNum + '\'' +
-                ", gender='" + gender + '\'' +
-                ", age='" + age + '\'' +
-                ", date='" + date + '\'' +
-                ", origin='" + origin + '\'' +
-                ", destination='" + destination + '\'' +
-                ", ETA='" + ETA + '\'' +
-                ", departureTime='" + departureTime + '\'' +
-                ", ticketPrice='" + ticketPrice + '\'' +
+                "\nBoarding Pass Number: " + id +
+                ", \nName: '" + name+ '\'' +
+                ", \nEmail: '" + email + '\'' +
+                ", \nPhone Number: " + phoneNum + '\'' +
+                ", \nGender: '" + gender + '\'' +
+                ", \nAge: '" + age + '\'' +
+                ", \nDate: '" + date + '\'' +
+                ", \nOrigin: '" + origin + '\'' +
+                ", \nDestination: '" + destination + '\'' +
+                ", \nETA: '" + ETA + '\'' +
+                ", \nDeparture Time: '" + departureTime + '\'' +
+                ", \nTicket Price: '" + ticketPrice + '\'' +
                 '}';
     }
 }
