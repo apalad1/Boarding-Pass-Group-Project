@@ -19,6 +19,7 @@ public class boardingPassCRUDQ {
         return scanner.nextLine();
     }
 
+    //method to create new boarding pass to be stored to the DB
     public static void createBoardingPass() {
 
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
@@ -29,7 +30,7 @@ public class boardingPassCRUDQ {
         Session session = factory.getCurrentSession();
 
         try {
-            //create passenger object(s)
+            //create boarding pass object(s) based on 'adminUser' input
             System.out.println("Creating passenger object(s)...");
 
             BoardingPass_Entity tempPass = new BoardingPass_Entity(
@@ -64,7 +65,7 @@ public class boardingPassCRUDQ {
         }
     }
 
-    //read method
+    //read method to grab and display info in the DB for the 'admin user'
     public static void retrieveBoardingPass(){
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(BoardingPass_Entity.class)
@@ -99,7 +100,7 @@ public class boardingPassCRUDQ {
         }
     }
 
-    //update method
+    //update method to allow 'admin user' to make changes to field values in the DB
     public static void updateBoardingPass() {
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(BoardingPass_Entity.class)
@@ -188,7 +189,7 @@ public class boardingPassCRUDQ {
         }
     }
 
-    //delete passenger method
+    //delete method to do the obvious
     public static void removeBoardingPass() {
         SessionFactory factory = new Configuration().configure("hibernate.cfg.xml")
                 .addAnnotatedClass(BoardingPass_Entity.class)

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-//Student Entity
+//BoardingPass Entity
 @Entity //This will let Java know that this is an entity that we are going to map to a database table.
 @Table(name = "boarding_pass_tracker") //This is for the actual name of the database table name we are mapping to the class.
 public class BoardingPass_Entity {
@@ -48,29 +48,9 @@ public class BoardingPass_Entity {
     @Column(name = "ticket_price") //This will map the departureTime field to the column named departure_time in your student table.
     private  String ticketPrice;
 
-    //Constructors
-    public BoardingPass_Entity() {
-
-    }
-
-//    public BoardingPass_Entity(String name, String email, String phoneNum, String gender, int age,
-//                               String date, String origin, String destination, String ETA, String departureTime, String ticketPrice) {
-////        this.id = ((int)(Math.random()*9999999));
-//        this.name = name;;
-//        this.email = email;
-//        this.phoneNum = phoneNum;
-//        this.gender = gender;
-//        this.age = age;
-//        this.date = date;
-//        this.origin = origin;
-//        this.destination = destination;
-//        this.ETA = ETA;
-//        this.departureTime = departureTime;
-//        this.ticketPrice = setPriceWithAgeAndGender(age);
-//
-//    }
-
-
+    //note** could not find a place to implement the "setPriceWithAge" method into the code
+    // all entries are String input that rely on the admin user to input accurate, formatted, and/or valid data entries
+    //Constructor(s) below:
     public BoardingPass_Entity(String name, String email, String phoneNum, String gender, int age, String date, String origin, String destination, String ETA, String departureTime, String ticketPrice) {
         this.name = name;
         this.email = email;
@@ -149,6 +129,7 @@ public class BoardingPass_Entity {
     public void setTicketPrice(String ticketPrice){
         this.ticketPrice = ticketPrice;
     }
+
     public String setPriceWithAgeAndGender(int theAge) {
         double price = 100.0;
         if (theAge <= 12)
