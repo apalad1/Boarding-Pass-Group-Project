@@ -1,11 +1,7 @@
 package entity;
 
-import com.boardingpass.BoardingPass;
-
 import javax.persistence.*;
 import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Locale;
 
 //BoardingPass Entity
@@ -67,26 +63,6 @@ public class BoardingPass_Entity {
         this.ETA = ETA;
         this.departureTime = departureTime;
         this.ticketPrice = ticketPrice;
-    }
-
-    // all entries are String input except age that rely on the admin user to input accurate, formatted, and/or valid data entries
-    // Overloaded Constructor(s) below:
-    public BoardingPass_Entity(BoardingPass newPerson) {
-        //this.id = newPerson.getBoardingPassNumber(); does not get displayed because sql cannot retrieve the id
-        this.name = newPerson.getName();
-        this.email = newPerson.getEmail();
-        this.phoneNum = newPerson.getPhoneNumber();
-        this.gender = newPerson.getGender();
-        this.age = newPerson.getAge();
-        this.origin = newPerson.getOrigin();
-        this.destination = newPerson.getDestination();
-        this.ticketPrice = setPriceWithAgeAndGender(this.age);
-        // pattern "MM/dd/yyyy HH:mm:ss"
-        Calendar cal = Calendar.getInstance();
-        this.departureTime = new SimpleDateFormat("HH:mm:ss").format(cal.getTime());
-        this.date = new SimpleDateFormat("MM/dd/yyyy").format(cal.getTime());
-        cal.add(Calendar.HOUR_OF_DAY,1);
-        this.ETA = new SimpleDateFormat("HH:mm:ss").format(cal.getTime());
     }
 
     //Getters and Setters
