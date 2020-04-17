@@ -5,7 +5,7 @@ import javax.persistence.*;
 //Student Entity
 @Entity //This will let Java know that this is an entity that we are going to map to a database table.
 @Table(name = "hb_pass_tracker") //This is for the actual name of the database table name we are mapping to the class.
-
+// Update 10
 public class Passenger {
 
     //Database Mapping

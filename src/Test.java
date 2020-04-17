@@ -1,8 +1,7 @@
-import CRUDQ.*;
-import entity.Passenger;
+import CRUDQ.boardingPassCRUDQ;
 
 import java.util.Scanner;
-
+// Update 10
 //Administrative console to simply CRUDQ interactions with the database.
 public class Test {
     public static void main(String[] args) {
