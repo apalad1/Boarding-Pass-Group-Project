@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import java.util.Scanner;
-// Update 10
+// Update 11
 public class CRUDQ {
     static Scanner scanner = new Scanner(System.in);
     //create passenger obj entity method
