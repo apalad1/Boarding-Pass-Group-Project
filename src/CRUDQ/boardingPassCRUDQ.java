@@ -1,13 +1,10 @@
 package CRUDQ;
 
 import entity.BoardingPass_Entity;
-import entity.Passenger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-import java.text.NumberFormat;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class boardingPassCRUDQ {

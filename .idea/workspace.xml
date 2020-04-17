@@ -3,17 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="072922b6-b07f-43e6-ba86-825de53db18d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/boardingpass/BoardingPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/boardingpass/BoardingPass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/entity/BoardingPass_Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/entity/BoardingPass_Entity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$5.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CRUDQ/CRUDQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CRUDQ/CRUDQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CRUDQ/boardingPassCRUDQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CRUDQ/boardingPassCRUDQ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/boardingpass/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/boardingpass/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/BoardingPass_Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/BoardingPass_Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Passenger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Passenger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pasgui.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/pasgui.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pasgui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pasgui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test_connection/TestConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test_connection/TestConnection.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,22 +83,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1587104176964" />
-    <state width="1323" height="151" key="GridCell.Tab.0.bottom" timestamp="1587109291321">
+    <state width="1323" height="126" key="GridCell.Tab.0.bottom" timestamp="1587137610115">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="151" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1587109291321" />
-    <state width="1323" height="151" key="GridCell.Tab.0.center" timestamp="1587109291321">
+    <state width="1323" height="126" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1587137610115" />
+    <state width="1323" height="126" key="GridCell.Tab.0.center" timestamp="1587137610115">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="151" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1587109291321" />
-    <state width="1323" height="151" key="GridCell.Tab.0.left" timestamp="1587109291321">
+    <state width="1323" height="126" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1587137610115" />
+    <state width="1323" height="126" key="GridCell.Tab.0.left" timestamp="1587137610115">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="151" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1587109291321" />
-    <state width="1323" height="151" key="GridCell.Tab.0.right" timestamp="1587109291321">
+    <state width="1323" height="126" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1587137610115" />
+    <state width="1323" height="126" key="GridCell.Tab.0.right" timestamp="1587137610115">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1323" height="151" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1587109291321" />
+    <state width="1323" height="126" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1587137610115" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1587104180589">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

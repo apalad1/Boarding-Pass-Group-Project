@@ -7,7 +7,7 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
-// Update 9
+
 //BoardingPass Entity
 @Entity //This will let Java know that this is an entity that we are going to map to a database table.
 @Table(name = "boarding_pass_tracker") //This is for the actual name of the database table name we are mapping to the class.
