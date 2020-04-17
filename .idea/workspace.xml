@@ -2,37 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="072922b6-b07f-43e6-ba86-825de53db18d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Boarding-Pass-Group-Project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/CRUDQ/CRUDQ.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/CRUDQ/boardingPassCRUDQ.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/boardingpass/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/AbstractLayout.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/DimensionInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/GridConstraints.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/GridLayoutManager.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/HorizontalInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/Spacer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/SupportCode$TextWithMnemonic.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/SupportCode.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/intellij/uiDesigner/core/VerticalInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/entity/BoardingPass_Entity.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/entity/Passenger.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$5.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$6.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/test_connection/TestConnection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/boardingpass/BoardingPass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/com/boardingpass/BoardingPass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/entity/BoardingPass_Entity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/entity/BoardingPass_Entity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Boarding-Pass-Group-Project/pasgui.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/BoardingPass_Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/BoardingPass_Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pasgui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pasgui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,10 +106,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1587104180589" />
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1587131252452">
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2" timestamp="1587132333840">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1587131252452" />
+    <state x="275" y="117" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1587132333840" />
     <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1587108062048">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
